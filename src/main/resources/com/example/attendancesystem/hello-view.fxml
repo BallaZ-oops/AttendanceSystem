@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.attendancesystem.HelloController">
+
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <TextField fx:id="nameField" promptText="Employee name"/>
+            <Button text="Check In" onAction="#onCheckIn"/>
+            <Button text="Check Out" onAction="#onCheckOut"/>
+            <Button text="Delete" onAction="#onDelete" style="-fx-background-color:#d9534f; -fx-text-fill:white;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="employeeColumn" text="Employee" prefWidth="150"/>
+                <TableColumn fx:id="checkInColumn" text="Check In" prefWidth="150"/>
+                <TableColumn fx:id="checkOutColumn" text="Check Out" prefWidth="150"/>
+                <TableColumn fx:id="hoursColumn" text="Hours Worked" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
